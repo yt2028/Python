@@ -1,2 +1,2 @@
 # Pythonのプログラムまとめ
-<img src="yt2028/yt2028/image/python.png" width=120 height=90>
+<img src="python.png" width=120 height=90>
