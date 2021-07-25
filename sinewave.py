@@ -18,7 +18,7 @@ my_drive = odrive.find_any()
 # my_drive = odrive.find_any("serial:/dev/ttyUSB0")
 
 # Calibrate motor and wait for it to finish
-c = input("Do you calibration : Yes(y) or No(n):")
+c = input("Do you calibrate : Yes(y) or No(n):")
 if c == "y":
 	print("starting calibration...")
 	my_drive.axis1.requested_state = AXIS_STATE_FULL_CALIBRATION_SEQUENCE
@@ -27,6 +27,7 @@ if c == "y":
 	my_drive.axis1.requested_state = AXIS_STATE_CLOSED_LOOP_CONTROL
 	time.sleep(0.1)
 	my_drive.axis1.controller.config.control_mode = CONTROL_MODE_POSITION_CONTROL
+	print('CONTROL MODE : POSITION')
 	
 
 
